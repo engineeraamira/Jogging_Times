@@ -1,0 +1,57 @@
+<%= form_with(model: user_jog, local: true) do |form| %>
+  <% if user_jog.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(user_jog.errors.count, "error") %> prohibited this user_jog from being saved:</h2>
+
+      <ul>
+        <% user_jog.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :user_id %>
+    <%= form.text_field :user_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :jogging_date %>
+    <%= form.date_select :jogging_date %>
+  </div>
+
+  <div class="field">
+    <%= form.label :jogging_time %>
+    <%= form.time_select :jogging_time %>
+  </div>
+
+  <div class="field">
+    <%= form.label :distance %>
+    <%= form.text_field :distance %>
+  </div>
+
+  <div class="field">
+    <%= form.label :created_by %>
+    <%= form.number_field :created_by %>
+  </div>
+
+  <div class="field">
+    <%= form.label :deleted %>
+    <%= form.check_box :deleted %>
+  </div>
+
+  <div class="field">
+    <%= form.label :deleted_by %>
+    <%= form.number_field :deleted_by %>
+  </div>
+
+  <div class="field">
+    <%= form.label :deleted_at %>
+    <%= form.datetime_select :deleted_at %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

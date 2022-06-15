@@ -1,0 +1,21 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user: one
+  jogging_date: 2022-06-15
+  jogging_time: 2022-06-15 20:12:59
+  distance: 1.5
+  created_by: 1
+  deleted: false
+  deleted_by: 1
+  deleted_at: 2022-06-15 20:12:59
+
+two:
+  user: two
+  jogging_date: 2022-06-15
+  jogging_time: 2022-06-15 20:12:59
+  distance: 1.5
+  created_by: 1
+  deleted: false
+  deleted_by: 1
+  deleted_at: 2022-06-15 20:12:59

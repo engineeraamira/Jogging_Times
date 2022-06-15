@@ -1,0 +1,41 @@
+<p id="notice"><%= notice %></p>
+
+<h1>User Jogs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>User</th>
+      <th>Jogging date</th>
+      <th>Jogging time</th>
+      <th>Distance</th>
+      <th>Created by</th>
+      <th>Deleted</th>
+      <th>Deleted by</th>
+      <th>Deleted at</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @user_jogs.each do |user_jog| %>
+      <tr>
+        <td><%= user_jog.user_id %></td>
+        <td><%= user_jog.jogging_date %></td>
+        <td><%= user_jog.jogging_time %></td>
+        <td><%= user_jog.distance %></td>
+        <td><%= user_jog.created_by %></td>
+        <td><%= user_jog.deleted %></td>
+        <td><%= user_jog.deleted_by %></td>
+        <td><%= user_jog.deleted_at %></td>
+        <td><%= link_to 'Show', user_jog %></td>
+        <td><%= link_to 'Edit', edit_user_jog_path(user_jog) %></td>
+        <td><%= link_to 'Destroy', user_jog, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New User Jog', new_user_jog_path %>

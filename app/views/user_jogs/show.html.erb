@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>User:</strong>
+  <%= @user_jog.user_id %>
+</p>
+
+<p>
+  <strong>Jogging date:</strong>
+  <%= @user_jog.jogging_date %>
+</p>
+
+<p>
+  <strong>Jogging time:</strong>
+  <%= @user_jog.jogging_time %>
+</p>
+
+<p>
+  <strong>Distance:</strong>
+  <%= @user_jog.distance %>
+</p>
+
+<p>
+  <strong>Created by:</strong>
+  <%= @user_jog.created_by %>
+</p>
+
+<p>
+  <strong>Deleted:</strong>
+  <%= @user_jog.deleted %>
+</p>
+
+<p>
+  <strong>Deleted by:</strong>
+  <%= @user_jog.deleted_by %>
+</p>
+
+<p>
+  <strong>Deleted at:</strong>
+  <%= @user_jog.deleted_at %>
+</p>
+
+<%= link_to 'Edit', edit_user_jog_path(@user_jog) %> |
+<%= link_to 'Back', user_jogs_path %>
